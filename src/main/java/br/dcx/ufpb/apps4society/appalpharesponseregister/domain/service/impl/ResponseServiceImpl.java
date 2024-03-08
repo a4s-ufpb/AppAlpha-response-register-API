@@ -32,7 +32,13 @@ public class ResponseServiceImpl implements ResponseService {
         Response response = new Response(responseInput.getTypedLetters(), responseInput.getTime(),
                 responseInput.isCorrect(), user, question);
         response = responseRepository.save(response);
-        return buildResponseOutput(response);
+        UserInfo userInfo = new UserInfo(response.getUser().getId(), response.getUser().getName(),
+                response.getUser().getEmail(), response.getUser().getBirthDate());
+        QuestionInfo questionInfo = new QuestionInfo(response.getQuestion().getId(), response.getQuestion().getWord(),
+                response.getQuestion().getTheme());
+        return ResponseOutput.builder().id(response.getId()).typedLetters(response.getTypedLetters())
+                .time(response.getTime())
+                .correct(response.isCorrect()).user(userInfo).question(questionInfo).build();
     }
 
     @Override
