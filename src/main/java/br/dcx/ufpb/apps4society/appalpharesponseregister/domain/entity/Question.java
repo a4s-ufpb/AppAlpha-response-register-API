@@ -12,6 +12,13 @@ public class Question {
     public Question() {
     }
 
+    public Question(Long id, String word, String theme, String correctLetterSequence) {
+        this.id = id;
+        this.word = word;
+        this.theme = theme;
+        this.correctLetterSequence = correctLetterSequence;
+    }
+
     public Question(String word, String theme, String correctLetterSequence) {
         this.word = word;
         this.theme = theme;
