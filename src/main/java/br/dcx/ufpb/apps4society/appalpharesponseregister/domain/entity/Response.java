@@ -11,6 +11,15 @@ public class Response {
     public Response() {
     }
 
+    public Response(Long id, String typedLetters, Long time, boolean correct, User user, Question question) {
+        this.id = id;
+        this.typedLetters = typedLetters;
+        this.time = time;
+        this.correct = correct;
+        this.user = user;
+        this.question = question;
+    }
+
     public Response(String typedLetters, Long time, boolean correct, User user, Question question) {
         this.typedLetters = typedLetters;
         this.time = time;
