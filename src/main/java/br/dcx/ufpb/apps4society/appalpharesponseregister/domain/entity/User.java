@@ -1,4 +1,4 @@
-package br.dcx.ufpb.apps4society.appalpharesponseregister.domain;
+package br.dcx.ufpb.apps4society.appalpharesponseregister.domain.entity;
 
 import java.time.LocalDate;
 
