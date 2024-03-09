@@ -17,4 +17,6 @@ public class ResponseService {
         Response response = responseRepository.findById(id).orElseThrow(RuntimeException::new);
         return new ResponseDTO(response.getId(), response.getTypedLetters(), response.isCorrect());
     }
+
+    
 }
