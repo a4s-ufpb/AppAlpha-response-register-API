@@ -2,7 +2,6 @@ package br.dcx.ufpb.apps4society.appalpharesponseregister.entity;
 
 import java.time.LocalDate;
 import java.util.Set;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
