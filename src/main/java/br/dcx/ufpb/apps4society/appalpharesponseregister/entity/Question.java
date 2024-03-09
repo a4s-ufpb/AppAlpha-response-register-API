@@ -17,7 +17,7 @@ public class Question {
     private Long id;
     private String word;
     private String theme;
-    private String correctWordSequence;
+    private String correctLettersSequence;
     @OneToMany(mappedBy = "question")
     private Set<Response> responses;
 
@@ -28,13 +28,13 @@ public class Question {
         this.id = id;
         this.word = word;
         this.theme = theme;
-        this.correctWordSequence = correctWordSequence;
+        this.correctLettersSequence = correctWordSequence;
     }
 
     public Question(String word, String theme, String correctWordSequence) {
         this.word = word;
         this.theme = theme;
-        this.correctWordSequence = correctWordSequence;
+        this.correctLettersSequence = correctWordSequence;
     }
 
     public Long getId() {
@@ -61,12 +61,12 @@ public class Question {
         this.theme = theme;
     }
 
-    public String getCorrectWordSequence() {
-        return correctWordSequence;
+    public String getCorrectLettersSequence() {
+        return correctLettersSequence;
     }
 
-    public void setCorrectWordSequence(String correctWordSequence) {
-        this.correctWordSequence = correctWordSequence;
+    public void setCorrectLettersSequence(String correctWordSequence) {
+        this.correctLettersSequence = correctWordSequence;
     }
 
     public Set<Response> getResponses() {
@@ -105,6 +105,6 @@ public class Question {
     @Override
     public String toString() {
         return "Question [id=" + id + ", word=" + word + ", theme=" + theme + ", correctWordSequence="
-                + correctWordSequence + "]";
+                + correctLettersSequence + "]";
     }
 }
