@@ -1,0 +1,1 @@
+insert into questions (word, theme, correct_letters_sequence) values ('arroz','COMIDA','aroz');
