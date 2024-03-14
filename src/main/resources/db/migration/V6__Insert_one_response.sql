@@ -1,0 +1,1 @@
+insert into responses (user_id, question_id, typed_letters, response_date, correct) values (1, 1, 'aroz', '2021-06-01 21:02:53', true);
