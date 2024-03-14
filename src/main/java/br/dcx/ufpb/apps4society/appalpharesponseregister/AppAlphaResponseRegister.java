@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AppalphaResponseRegisterApplication {
+public class AppAlphaResponseRegister {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppalphaResponseRegisterApplication.class, args);
+		SpringApplication.run(AppAlphaResponseRegister.class, args);
 	}
 
 }
