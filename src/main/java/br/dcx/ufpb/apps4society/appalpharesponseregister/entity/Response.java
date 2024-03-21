@@ -70,6 +70,14 @@ public class Response {
         this.correct = correct;
     }
 
+    public LocalDateTime getResponseDate() {
+        return this.responseDate;
+    }
+
+    public void setResponseDate(LocalDateTime responseDate) {
+        this.responseDate = responseDate;
+    }
+
     public User getUser() {
         return user;
     }
