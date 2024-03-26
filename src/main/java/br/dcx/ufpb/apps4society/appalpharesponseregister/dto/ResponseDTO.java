@@ -12,7 +12,7 @@ public class ResponseDTO {
     private Long id;
     private String typedLetters;
     private boolean correct;
-    private UserDTO user;
+    private UserDTOWithoutResponses user;
 
     public ResponseDTO() {
     }
@@ -52,11 +52,11 @@ public class ResponseDTO {
         this.correct = correct;
     }
 
-    public UserDTO getUser() {
+    public UserDTOWithoutResponses getUser() {
         return user;
     }
 
-    public void setUser(UserDTO user) {
+    public void setUser(UserDTOWithoutResponses user) {
         this.user = user;
     }
 
