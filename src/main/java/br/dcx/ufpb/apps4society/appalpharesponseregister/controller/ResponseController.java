@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.dcx.ufpb.apps4society.appalpharesponseregister.service.ResponseService;
 
 @RestController
-@RequestMapping("/api/1.0")
+@RequestMapping("/api")
 public class ResponseController {
 
     @Autowired
