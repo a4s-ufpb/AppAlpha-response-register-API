@@ -1,1 +1,1 @@
-insert into users (name, email, birth_date) values ('André Victor', 'andre.victor@dcx.ufpb.br', '2002-12-01');
+insert into users (id, name, email, birth_date) values (1, 'André Victor', 'andre.victor@dcx.ufpb.br', '2002-12-01');
