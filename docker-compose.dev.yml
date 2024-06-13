@@ -2,7 +2,9 @@ services:
   db:
     container_name: appalpha-response-register-db
     image: postgres
+    environment:
+      POSTGRES_USER: appalpha
+      POSTGRES_PASSWORD: appalpha
+      POSTGRES_DB: appalpha
     ports:
       - 5432:5432
-    environment:
-      POSTGRES_PASSWORD: postgres
