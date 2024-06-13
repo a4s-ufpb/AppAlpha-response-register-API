@@ -17,7 +17,7 @@ public class Response {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String typedLetters;
-    private LocalDateTime responseDate;
+    private LocalDateTime responseDate = LocalDateTime.now();
     private boolean correct;
     @ManyToOne
     @JoinColumn(name = "user_id")
