@@ -1,11 +1,14 @@
 package br.dcx.ufpb.apps4society.appalpharesponseregister.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -16,25 +19,15 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String word;
-    private String theme;
     private String correctLettersSequence;
     @OneToMany(mappedBy = "question")
-    private Set<Response> responses;
+    private Set<Response> responses = new HashSet<>();
+
+    // @ManyToOne
+    // @JoinColumn(name = "theme_id")
+    // private Theme theme;
 
     public Question() {
-    }
-
-    public Question(Long id, String word, String theme, String correctWordSequence) {
-        this.id = id;
-        this.word = word;
-        this.theme = theme;
-        this.correctLettersSequence = correctWordSequence;
-    }
-
-    public Question(String word, String theme, String correctWordSequence) {
-        this.word = word;
-        this.theme = theme;
-        this.correctLettersSequence = correctWordSequence;
     }
 
     public Long getId() {
@@ -53,14 +46,6 @@ public class Question {
         this.word = word;
     }
 
-    public String getTheme() {
-        return theme;
-    }
-
-    public void setTheme(String theme) {
-        this.theme = theme;
-    }
-
     public String getCorrectLettersSequence() {
         return correctLettersSequence;
     }
@@ -76,6 +61,14 @@ public class Question {
     public void setResponses(Set<Response> responses) {
         this.responses = responses;
     }
+
+    // public Theme getTheme() {
+    //     return theme;
+    // }
+
+    // public void setTheme(Theme theme) {
+    //     this.theme = theme;
+    // }
 
     @Override
     public int hashCode() {
@@ -102,9 +95,9 @@ public class Question {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Question [id=" + id + ", word=" + word + ", theme=" + theme + ", correctWordSequence="
-                + correctLettersSequence + "]";
-    }
+    // @Override
+    // public String toString() {
+    //     return "Question [id=" + id + ", word=" + word + ", theme=" + theme + ", correctWordSequence="
+    //             + correctLettersSequence + "]";
+    // }
 }
