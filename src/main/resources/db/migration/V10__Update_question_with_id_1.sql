@@ -1,0 +1,1 @@
+UPDATE questions SET theme_id = 1 WHERE id = 1;
