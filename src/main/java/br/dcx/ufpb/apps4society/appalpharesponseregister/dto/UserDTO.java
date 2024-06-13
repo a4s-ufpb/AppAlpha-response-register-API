@@ -1,18 +1,16 @@
 package br.dcx.ufpb.apps4society.appalpharesponseregister.dto;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
 
-public class UserDTOWithoutResponses {
+public class UserDTO {
     private Long id;
     private String name;
     private String email;
     private LocalDate birthDate;
 
-    public UserDTOWithoutResponses() {}
+    public UserDTO() {}
 
-    public UserDTOWithoutResponses(String name, String email, LocalDate birthDate) {
+    public UserDTO(String name, String email, LocalDate birthDate) {
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
